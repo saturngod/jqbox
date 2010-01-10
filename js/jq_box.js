@@ -61,14 +61,14 @@
   		$(".jqbox_yes").click(function(){
   			$(".jqbox_innerhtml").fadeOut("slow");
 		  	$(".jqbox_shadow").fadeOut("slow");
-		  	eval(options.onyes);
+		  	if(options.onyes!="")	eval(options.onyes);
   		});
   		
   		
   		$(".jqbox_no").click(function(){
   			$(".jqbox_innerhtml").fadeOut("slow");
 		  	$(".jqbox_shadow").fadeOut("slow");
-		  	eval(options.onno);
+		  	if(options.onno!="") eval(options.onno);
   		});
 
   		
