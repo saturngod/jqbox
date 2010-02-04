@@ -9,7 +9,8 @@
    confirmbox:false,
    onyes:"",
    onno:"",
-   onok:""
+   onok:"",
+   closebtn:true
     
   };  
     
@@ -26,7 +27,10 @@
   		
   		$("body").append("<div class='jqbox_shadow'></div>");
   		$("body").append("<div class='jqbox_innerhtml'><div class='jqbox_html_data'>"+options.html+"</div></div>");
-  		$(".jqbox_innerhtml").append("<img src='images/fancy_closebox.png' class='jqbox_close'>");
+  		if(options.closebtn)
+  		{
+  			$(".jqbox_innerhtml").append("<img src='images/fancy_closebox.png' class='jqbox_close'>");
+  		}
   		
   		if(options.alertbox)
   		{
@@ -48,11 +52,14 @@
   		$(".jqbox_shadow").fadeIn();
   		$(".jqbox_innerhtml").fadeIn("slow");
   		
-  		$(".jqbox_close").click(function(){
-			$(".jqbox_innerhtml").fadeOut("slow");
-		  	$(".jqbox_shadow").fadeOut("slow");
-		  	
-  		});
+  		if(options.closebtn)
+  		{
+  			$(".jqbox_close").click(function(){
+				$(".jqbox_innerhtml").fadeOut("slow");
+			  	$(".jqbox_shadow").fadeOut("slow");
+			  	
+  			});
+  		}
   		
   		$(".jqbox_ok").click(function(){
   			$(".jqbox_innerhtml").fadeOut("slow");
