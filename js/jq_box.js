@@ -8,7 +8,8 @@
    alertbox:false,
    confirmbox:false,
    onyes:"",
-   onno:""
+   onno:"",
+   onok:""
     
   };  
     
@@ -56,6 +57,9 @@
   		$(".jqbox_ok").click(function(){
   			$(".jqbox_innerhtml").fadeOut("slow");
 		  	$(".jqbox_shadow").fadeOut("slow");
+		  	
+		  	if(options.onok!="") eval(options.onok);
+		  	
   		});
   		
   		$(".jqbox_yes").click(function(){
