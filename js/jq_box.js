@@ -10,6 +10,9 @@
    onyes:"",
    onno:"",
    onok:"",
+   yesttxt: "Yes",
+   notxt: "No",
+   oktxt: "OK",
    closebtn:true
     
   };  
@@ -34,11 +37,11 @@
   		
   		if(options.alertbox)
   		{
-  			$(".jqbox_innerhtml").append("<div class='jqbox_bottom'><div class='jqbox_ok jqbox_btn'>OK</div></div>");
+  			$(".jqbox_innerhtml").append("<div class='jqbox_bottom'><div class='jqbox_ok jqbox_btn'>"+options.oktxt+"</div></div>");
   		}
   		else if(options.confirmbox)
   		{
-  			$(".jqbox_innerhtml").append("<div class='jqbox_bottom'><div class='jqbox_yes jqbox_btn'>Yes</div><div class='jqbox_no jqbox_btn'>No</div></div>");
+  			$(".jqbox_innerhtml").append("<div class='jqbox_bottom'><div class='jqbox_yes jqbox_btn'>"+options.yestxt+"</div><div class='jqbox_no jqbox_btn'>"+options.notxt+"</div></div>");
   		}
   		
   		
