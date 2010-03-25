@@ -10,8 +10,8 @@
    onyes:"",
    onno:"",
    onok:"",
-   yesttxt: "Yes",
-   notxt: "No",
+   yestxt: "YES",
+   notxt:"NO",
    oktxt: "OK",
    closebtn:true
     
