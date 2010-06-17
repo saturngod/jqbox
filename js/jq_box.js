@@ -32,7 +32,7 @@
   		$("body").append("<div class='jqbox_innerhtml'><div class='jqbox_html_data'>"+options.html+"</div></div>");
   		if(options.closebtn)
   		{
-  			$(".jqbox_innerhtml").append("<img src='images/fancy_closebox.png' class='jqbox_close'>");
+  			$(".jqbox_innerhtml").append("<div class='jqbox_close'>&nbsp;</div>");
   		}
   		
   		if(options.alertbox)

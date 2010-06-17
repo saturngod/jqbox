@@ -43,6 +43,9 @@ margin:0px;
 	right: -15px;
 	position: absolute;
 	cursor: pointer;
+	background-image: url('../images/fancy_closebox.png') ;
+	width: 30px;
+	height: 30px;
 }
 
 .jqbox_bottom
