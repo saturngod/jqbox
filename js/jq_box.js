@@ -13,6 +13,7 @@
    yestxt: "YES",
    notxt:"NO",
    oktxt: "OK",
+   speed:1000,
    closebtn:true
     
   };  
@@ -32,7 +33,7 @@
   		$("body").append("<div class='jqbox_innerhtml'><div class='jqbox_html_data'>"+options.html+"</div></div>");
   		if(options.closebtn)
   		{
-  			$(".jqbox_innerhtml").append("<div class='jqbox_close'>&nbsp;</div>");
+  			$(".jqbox_innerhtml").append("<div class='jqbox_close' style='display:none'>&nbsp;</div>");
   		}
   		
   		if(options.alertbox)
@@ -47,13 +48,21 @@
   		
   		
   		
-  		$(".jqbox_innerhtml").css("width",options.width+"px");
-  		$(".jqbox_innerhtml").css("height",options.height+"px");
+  		//$(".jqbox_innerhtml").css("width",options.width+"px");
+  		//$(".jqbox_innerhtml").css("height",options.height+"px");
+  		$(".jqbox_innerhtml").css("width","1px");
+  		$(".jqbox_innerhtml").css("height","1px");
   		$(".jqbox_innerhtml").css("margin-top","-"+margin_top+"px");
   		$(".jqbox_innerhtml").css("margin-left","-"+margin_left+"px");
   		
   		$(".jqbox_shadow").fadeIn();
-  		$(".jqbox_innerhtml").fadeIn("slow");
+  		//$(".jqbox_innerhtml").fadeIn("slow");
+  		$(".jqbox_innerhtml").animate({
+  							width:options.width+"px",
+  							"height":options.height+"px",
+  							}, options.speed,function(){
+  								$(".jqbox_close").fadeIn("fase");
+  							});
   		
   		if(options.closebtn)
   		{
