@@ -52,14 +52,18 @@
   		//$(".jqbox_innerhtml").css("height",options.height+"px");
   		$(".jqbox_innerhtml").css("width","1px");
   		$(".jqbox_innerhtml").css("height","1px");
-  		$(".jqbox_innerhtml").css("margin-top","-"+margin_top+"px");
-  		$(".jqbox_innerhtml").css("margin-left","-"+margin_left+"px");
+  		$(".jqbox_innerhtml").css("margin-top","-50.5px");
+  		$(".jqbox_innerhtml").css("margin-left","-0.5px");
+		$(".jqbox_innerhtml").css("opacity","0");
   		
   		$(".jqbox_shadow").fadeIn();
   		//$(".jqbox_innerhtml").fadeIn("slow");
   		$(".jqbox_innerhtml").animate({
   							width:options.width+"px",
-  							"height":options.height+"px",
+  							height:options.height+"px",
+  							"margin-top":"-"+margin_top+"px",
+  							"margin-left":"-"+margin_left+"px",
+  							"opacity":1,
   							}, options.speed,function(){
   								$(".jqbox_close").fadeIn("fase");
   							});
