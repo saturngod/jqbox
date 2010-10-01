@@ -63,7 +63,7 @@
   							height:options.height+"px",
   							"margin-top":"-"+margin_top+"px",
   							"margin-left":"-"+margin_left+"px",
-  							"opacity":1,
+  							"opacity":1
   							}, options.speed,function(){
   								jQuery(".jqbox_close").fadeIn("fase");
   							});
